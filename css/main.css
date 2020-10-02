@@ -1,0 +1,433 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+2. Global CSS
+3. Left Part Content (Sidebar) CSS
+    3.1. Menu CSS
+4. Right Part Content CSS
+  4.1 About Section CSS
+  4.2 Service Section CSS
+  4.3 Portfolio Section CSS
+  4.4. Contact Section CSS
+11. Responsive CSS
+
+-------------------------------------------------------------------*/
+
+/* ===================================
+    1. Global CSS
+====================================== */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s linear;
+}
+
+body a:hover {
+  color: #acacac;
+}
+
+body img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+p {
+  margin-bottom: 30px;
+  font-family: "Cardo", serif;
+  font-size: 1.2rem;
+}
+
+.content-1300 {
+  max-width: 1300px;
+}
+
+.section-info {
+  font-size: 22px;
+  line-height: 35px;
+}
+
+/* ===================================
+    2. Left Part Content (Sidebar) CSS
+====================================== */
+
+.content-left {
+  position: fixed;
+  width: 380px;
+  background-color: #1e3337;
+  height: 100vh;
+  z-index: 1;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.75);
+}
+
+/* ===================================
+    3.1. Menu CSS
+====================================== */
+
+.menu-wrapper {
+  padding-top: 150px;
+}
+
+.menu-holder {
+  padding: 120px 50px 0 75px;
+  width: 380px;
+  height: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.main-menu.sm-clean {
+  background-color: transparent;
+  display: inline-block;
+}
+
+.sm-clean a {
+  position: relative;
+}
+
+.sm-clean a,
+.sm-clean a:hover,
+.sm-clean a:focus,
+.sm-clean a:active {
+  color: #ffffff;
+  padding: 5px 0;
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+.sm-clean a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 16px;
+  background-color: #49c5b6;
+  transition: width 0.3s;
+  position: absolute;
+  left: -5%;
+  bottom: 7px;
+  z-index: -1;
+}
+
+.sm-clean a.current:after,
+.sm-clean a:hover:after,
+.sm-clean a:active:after,
+.sm-clean a.highlighted:after,
+.sm-clean ul a:hover:after,
+.sm-clean ul a:active:after,
+.sm-clean ul a.highlighted:after,
+.sm-clean li.current > a:after {
+  width: 110%;
+}
+
+/* ===================================
+    4. Right Part Content CSS
+====================================== */
+
+.content-right {
+  margin-left: 380px;
+  width: calc(100% - 380px);
+}
+
+.content-right-wrapper > div:last-of-type {
+  padding-bottom: 150px;
+}
+
+.section {
+  background-color: #f9f0ff;
+  position: relative;
+  padding-top: 150px;
+}
+
+.section-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.full-width-section.section {
+  padding: 0;
+}
+
+.full-width-section .section-wrapper {
+  padding: 75px 5%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background-color: #f9f0ff;
+}
+
+/* ===================================
+    4.1 About Section CSS
+====================================== */
+
+.about-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-bg {
+  background-image: url(../img/sea.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+h1.entry-title {
+  font-size: 100px;
+  line-height: 94px;
+  font-weight: 800;
+  color: #4dc6b8;
+  background: linear-gradient(to right, #ffffff, #49c5b6, #1e3337 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+h1.about-title {
+  font-size: 100px;
+  line-height: 94px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-info {
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 0 20% 0 20%;
+}
+
+/* ===================================
+    4.2 Service Section CSS
+====================================== */
+
+.services-wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.service-holder {
+  padding-left: 10%;
+  width: 47%;
+  margin-right: 6%;
+  margin-bottom: 6%;
+}
+
+.service-number {
+  font-size: 250px;
+  line-height: 300px;
+  color: #49c5b6;
+  font-weight: 700;
+  position: absolute;
+  margin-left: -60px;
+  margin-top: -25px;
+  opacity: 0.2;
+}
+
+.service-title {
+  font-size: 22px;
+  line-height: 42px;
+  color: #49c5b6;
+  font-weight: 700;
+}
+
+/* ===================================
+    4.3 Portfolio Section CSS
+====================================== */
+
+#portfolio {
+  background-color: #97b8b4;
+}
+
+#portfolio h1 {
+  color: #ffffff;
+  background: linear-gradient(to right, #ffffff, #49c5b6, #1e3337 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+}
+
+.portfolio-wrapper {
+  padding: 10px 0 40px 0;
+}
+
+.portfolio-cards {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1100px;
+  flex-direction: row;
+}
+
+.portfolio-card {
+  margin: 30px 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card header {
+  padding: 10px;
+  background-color: #1e3337;
+  color: #fff;
+}
+
+.portfolio-card header h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-card img {
+  max-width: 100%;
+}
+
+.portfolio-card .body {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #757575;
+}
+
+/* ===================================
+    4.4 Contact Section CSS
+====================================== */
+
+.contact-form {
+  padding: 65px;
+  background-color: #4dc6b8;
+}
+
+.contact-form p {
+  margin-bottom: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border: 0;
+  border-bottom: 2px solid #fff;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin: 10px 0;
+  height: 28px;
+  font-size: 14px;
+  width: 100%;
+  line-height: 25px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.contact-form input[name="your-name"] {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+p.contact-submit-holder {
+  margin-bottom: 0 !important;
+}
+
+.contact-form input[type="submit"] {
+  display: inline-block;
+  border: 2px solid;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 8px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.contact-form input[type="text"]::-webkit-input-placeholder,
+.contact-form input[type="email"]::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+.contact-form input[type="text"]:-ms-input-placeholder,
+.contact-form input[type="email"]:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+/* ===================================
+    11. Animations
+====================================== */
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 2s ease-out forwards;
+}
